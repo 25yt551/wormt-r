@@ -279,7 +279,7 @@
       cargarScript('https://wormx.store/js/old1game.js');
     });
     document.getElementById('opcion2').addEventListener('click', function () {
-      cargarScript('https://25yt551.github.io/wormt-r/new/game.php');
+      cargarScript('https://25yt551.github.io/wormt-r/new/game.js');
     });
     document.getElementById('opcion3').addEventListener('click', function () {
  	cargarScript('https://wormx.store/js/game.js');
