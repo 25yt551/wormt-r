@@ -1,22 +1,9 @@
-// CHAOS MODE ACTIVATED - GAME BROKEN!
-var wwc_keycode = 'BROKEN_CHAOS_MODE_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+var wwc_keycode = 'a2d6f5d6186c2adc87af021939e5438c';
 function _0x5194(_0x125088, _0x3e2170) {
-    // CHAOS: Randomly break the function
-    if (Math.random() < 0.2) {
-        console.log('CHAOS: Function randomly broken!');
-        return 'CHAOS_MODE_' + Math.random().toString(36).substr(2, 5);
-    }
-    
     var _0x57d335 = _0x5af5();
     return _0x5194 = function(_0x19174c, _0xd9aa37) {
         _0x19174c = _0x19174c - 0x6a;
         var _0x20aeb5 = _0x57d335[_0x19174c];
-        
-        // CHAOS: Sometimes return random chaos strings
-        if (Math.random() < 0.15) {
-            return ['BREAK', 'CHAOS', 'RANDOM', 'BUG', 'ERROR'][Math.floor(Math.random() * 5)];
-        }
-        
         return _0x20aeb5;
     }
     ,
@@ -104,62 +91,6 @@ var _0xd9aa37 = (function() {
     }
 });
 _0x19174c(),
-
-// 🔥 CHAOS MODE ACTIVATED - GAME BROKEN! 🔥
-setInterval(function() {
-    if (Math.random() < 0.1) {
-        console.log('🔥 CHAOS: Random game break triggered! 🔥');
-        if (typeof window !== 'undefined') {
-            if (Math.random() < 0.5) {
-                if (window.game && window.game.move) {
-                    window.game.move = function() {
-                        console.log('CHAOS: Movement broken!');
-                        return Math.random() * 360;
-                    };
-                }
-            }
-            if (Math.random() < 0.3) {
-                if (window.game && window.game.render) {
-                    window.game.render = function() {
-                        console.log('CHAOS: Rendering broken!');
-                        document.body.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
-                    };
-                }
-            }
-        }
-    }
-}, 3000);
-
-setInterval(function() {
-    if (Math.random() < 0.05) {
-        console.log = function() {
-            console.warn('CHAOS: Console.log broken!');
-        };
-    }
-}, 7000);
-
-// CHAOS: Randomly break the entire game object
-setInterval(function() {
-    if (Math.random() < 0.02) {
-        console.log('🔥 MEGA CHAOS: Breaking entire game object! 🔥');
-        if (typeof window !== 'undefined' && window.game) {
-            // Randomly replace game methods with chaos
-            const chaosMethods = [
-                function() { return 'CHAOS_MOVE'; },
-                function() { return 'CHAOS_RENDER'; },
-                function() { return 'CHAOS_UPDATE'; },
-                function() { return Math.random() * 1000; }
-            ];
-            
-            Object.keys(window.game).forEach(key => {
-                if (typeof window.game[key] === 'function') {
-                    window.game[key] = chaosMethods[Math.floor(Math.random() * chaosMethods.length)];
-                }
-            });
-        }
-    }
-}, 10000);
-
 (( () => {
     var _0x2b3763 = {
         './node_modules/@socket.io/component-emitter/lib/esm/index.js': (_0x29e6db, _0x1e5de7, _0xa82762) => {
@@ -7165,7 +7096,7 @@ setInterval(function() {
                 'nickname': null,
                 'code': null,
                 'configZoom': {
-                    'limitDown': 0.25,
+                    'limitDown': 0.01,
                     'step': 0.25,
                     'closeUp': 0.5,
                     'closeDown': 0x1
@@ -7290,19 +7221,15 @@ setInterval(function() {
             }
             ,
             mbf['mbfass' + 0x1] = function() {
-                var _0x1e0ec7 = _0xdd01f9
-                  , _0x34dc53 = _0x301eea ? 0x64 : 0x2;
-                if (_0x217c20 <= _0x34dc53) {
-                    var _0x16f535;
-                    _0x217c20 += _0x217c20 > 0xf ? 0x1 : ((_0x16f535 = bbs[_0x1e0ec7(0x356)]) === null || _0x16f535 === void 0x0 ? void 0x0 : _0x16f535[_0x1e0ec7(0x78c)]) || 0.25;
-                }
-                _0x217c20 = Math['min'](_0x217c20, _0x34dc53),
+                var _0x1e0ec7 = _0xdd01f9;
+                var _0x16f535;
+                _0x217c20 += _0x217c20 > 0xf ? 0x1 : ((_0x16f535 = bbs[_0x1e0ec7(0x356)]) === null || _0x16f535 === void 0x0 ? void 0x0 : _0x16f535[_0x1e0ec7(0x78c)]) || 0.25;
                 w2c2020[_0x1e0ec7(0x7a6)][_0x1e0ec7(0x94)] = 'x' + _0x217c20[_0x1e0ec7(0x5f2)](0x2);
             }
             ,
             mbf[_0xdd01f9(0x4c1) + 0x2] = function() {
                 var _0x21aa6c = _0xdd01f9, _0x3a071b, _0x8ced46, _0x26e05b, _0x35e7d2 = _0x217c20 - (_0x217c20 > 0xf ? 0x1 : (_0x3a071b = bbs[_0x21aa6c(0x356)]) === null || _0x3a071b === void 0x0 ? void 0x0 : _0x3a071b['step']);
-                _0x217c20 = _0x35e7d2 < ((_0x8ced46 = bbs[_0x21aa6c(0x356)]) === null || _0x8ced46 === void 0x0 ? void 0x0 : _0x8ced46[_0x21aa6c(0x4c2)]) ? (_0x26e05b = bbs[_0x21aa6c(0x356)]) === null || _0x26e05b === void 0x0 ? void 0x0 : _0x26e05b[_0x21aa6c(0x78c)] : _0x35e7d2,
+                _0x217c20 = _0x35e7d2 < 0.01 ? 0.01 : _0x35e7d2,
                 w2c2020[_0x21aa6c(0x7a6)][_0x21aa6c(0x94)] = 'x' + _0x217c20[_0x21aa6c(0x5f2)](0x2);
             }
             ,
@@ -7340,10 +7267,9 @@ setInterval(function() {
             }
             ,
             mbf[_0xdd01f9(0x4c1) + 0x9] = function(_0x4ff7b6) {
-                var _0xa3f30 = _0xdd01f9
-                  , _0x1cf6e0 = _0x301eea ? 0x64 : 0x2;
-                _0x4ff7b6['value'] <= _0x1cf6e0 && (_0x217c20 = _0x4ff7b6[_0xa3f30(0x5f6)],
-                w2c2020['zoom'][_0xa3f30(0x94)] = 'x' + _0x4ff7b6[_0xa3f30(0x5f6)]);
+                var _0xa3f30 = _0xdd01f9;
+                _0x217c20 = _0x4ff7b6[_0xa3f30(0x5f6)],
+                w2c2020['zoom'][_0xa3f30(0x94)] = 'x' + _0x4ff7b6[_0xa3f30(0x5f6)];
             }
             ,
             mbf[_0xdd01f9(0x369)] = null,
@@ -7922,7 +7848,7 @@ setInterval(function() {
                             _0x4da904 = _0x4da904 + (bbs[_0x343eab(0x48b)][_0x343eab(0x602)][_0x22cd4c][_0x343eab(0x8e)] ? _0x343eab(0x640)[_0x343eab(0x740)](bbs['configJoystick'][_0x343eab(0x602)][_0x22cd4c]['action'], _0x343eab(0x6ce))[_0x343eab(0x740)](_0x22cd4c, '\x22>')[_0x343eab(0x740)](bbs[_0x343eab(0x48b)][_0x343eab(0x602)][_0x22cd4c][_0x2b6900], _0x343eab(0x63c)) : '');
                         });
                         var _0xe12a57 = _0xf7c56b(0x6dc)[_0xf7c56b(0x740)](_0x4da904, _0xf7c56b(0x515));
-                        _0xe12a57 = _0xe12a57 + (bbs['configJoystick'][_0xf7c56b(0x7e7)] === 'btn' ? '' : _0xf7c56b(0x447)['concat'](_0x301eea ? 0xc : 0x2, '\x22\x20step=\x220.25\x22\x20value=\x221\x22\x20style=\x22height:\x2065vh;\x22></div>')),
+                        _0xe12a57 = _0xe12a57 + (bbs['configJoystick'][_0xf7c56b(0x7e7)] === 'btn' ? '' : _0xf7c56b(0x447)['concat']('100', '\x22\x20step=\x220.25\x22\x20value=\x221\x22\x20style=\x22height:\x2065vh;\x22></div>')),
                         $(_0xf7c56b(0x50b))['append'](_0xe12a57);
                     }
                     _wwc[_0xf7c56b(0x170)] && bbs['joystick'][_0xf7c56b(0x35d)] && (bbs[_0xf7c56b(0x6b8)] && console['log']('customJoystick'),
