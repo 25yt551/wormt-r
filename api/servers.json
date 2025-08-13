@@ -250,7 +250,7 @@
         "id": 700,
         "name": "01.🍒 Cherry Land<img class='team' src='https://asserts.wormworld.io/rooms/favicon128x128.png'/>",
         "region": "australia",
-        "serverUrl": "wss://sin-a.wormate.io:31764/wormy",
+        "serverUrl": "wss://fra-c.wormate.io:32262/wormy",
         "status": 1
     }
       
@@ -1259,3 +1259,4 @@
   }
   ]
 }
+
