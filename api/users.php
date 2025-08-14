@@ -1,130 +1,46 @@
 {
-    "success": true,
-    "Users": [
-        {
-            "id": 1,
-            "cliente_NOMBRE": "TIK_YT",
-            "cliente_ID": "gg_116152060195741273040",
-            "Client_KeyAccecs": "XTPRIVATESKIN",
-            "cliente_DateExpired": "2030-06-30",
-            "status": 1,
-            "Client_VisibleSkin": "1400"
-        },
-        {
-              "id": 2,
-              "cliente_NOMBRE": "mustafa",
-              "cliente_ID": "gg_102208098961384530424",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-10-01",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        },
-        {
-              "id": 3,
-              "cliente_NOMBRE": "mustafa",
-              "cliente_ID": "gg_102208098961384530424",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-08-10",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        },
-        {
-              "id": 4,
-              "cliente_NOMBRE": "tnen",
-              "cliente_ID": "gg_101324750622109474079",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-08-31",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        },
-        {
-              "id": 5,
-              "cliente_NOMBRE": "sager",
-              "cliente_ID": "gg_108114025636451834978",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-08-31",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        },
-        {
-              "id": 6,
-              "cliente_NOMBRE": "malik",
-              "cliente_ID": "gg_106827977162787502427",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-08-31",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        },
-        {
-              "id": 7,
-              "cliente_NOMBRE": "hallow",
-              "cliente_ID": "gg_101404793016664189589",
-              "Client_KeyAccecs": "XTPRIVATESKIN",
-              "cliente_DateExpired": "2025-10-01",
-              "status": 1,
-              "Client_VisibleSkin": "0000",
-              "Client_VisibleSkin1": "0000",
-              "Client_VisibleSkin2": "0000",
-              "Client_VisibleSkin3": "0000",
-              "Client_VisibleSkin4": "0000",
-              "Client_VisibleSkin5": "0000",
-              "Client_VisibleSkin6": "0000",
-              "Client_VisibleSkin7": "0000",
-              "Client_VisibleSkin8": "0000",
-              "Client_VisibleSkin9": "0000",
-              "Client_VisibleSkin10": "0000"
-        }
-    ],
-    "timestamp": 1754244868,
-    "error": null
+  "success": true,
+  "users": [
+     {
+      "cliente_ID": "gg_115722868490777130502",
+      "cliente_NOMBRE": "Y�ldo",
+      "cliente_FECHA_EXPIRACION": "2026-12-09 21:32:09",
+      "cliente_STATE": 3,
+      "cliente_SUBSCRIPTION": {
+        "id": 2,
+        "description": "5$",
+        "months": 1
+      }
+    },
+     {
+      "cliente_ID": "gg_106263203218070035844",
+      "cliente_NOMBRE": "SerkanAbiAtabey",
+      "cliente_FECHA_EXPIRACION": "2026-12-09 21:32:09",
+      "cliente_STATE": 3,
+      "cliente_SUBSCRIPTION": {
+        "id": 2,
+        "description": "5$",
+        "months": 1
+      }
+    },
+     {
+      "cliente_ID": "gg_102601141305099468593",
+      "cliente_NOMBRE": "SerkanAbiAtabey",
+      "cliente_FECHA_EXPIRACION": "2026-12-09 21:32:09",
+      "cliente_STATE": 3,
+      "cliente_SUBSCRIPTION": {
+        "id": 2,
+        "description": "5$",
+        "months": 1
+      }
+    },
+
+    {
+      "cliente_ID": "fb_2709991945757792",
+      "cliente_NOMBRE": "Evanildo Souza",
+      "cliente_FECHA_EXPIRACION": "2022-10-11 16:58:35",
+      "cliente_STATE": 3,
+      "cliente_SUBSCRIPTION": ""
+    }
+   ]
 }
