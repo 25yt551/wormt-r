@@ -1,0 +1,1077 @@
+* {
+  font-family: "Palanquin Dark", serif;
+  font-weight: 200;
+  font-style: normal;
+  }
+
+#settins-container {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    height: 280px;
+    margin: 20px 0;
+    overflow-y: auto;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+button#op_tmw, button#btn_crsw {
+  background-image: linear-gradient(#22ffcd, #cb5dc5);
+  font-weight: bold;
+  border-width: 1px;
+  border-color: #ffffff;
+  color: #fff;
+  line-height: 46px;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: 0;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 20%);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .5s ease;
+  display: inline-block;
+  margin-top: 90px;
+  text-shadow: 0 0 1px #000;
+  position: relative;
+  left: 670px;  /* Sa  kayd rma */
+  top: -28px;  /* Yukar  kayd rma */
+}
+
+#modal_tmw.modal { 
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	left: 0; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+} 
+#modal_tmw .modal-content { 
+	background-image: linear-gradient(#22ffcd, #cb5dc5);
+    font-weight: bold;
+    color: white;
+    border-color: #ffffff;
+    margin: auto;
+    border: 1px solid;
+    position: relative;
+    border-radius: 30px;
+    width: 570px;
+    padding: 30px;
+    margin-top: 70px;
+} 
+#modal_tmw .modal-title { 
+    margin-top: 0px;
+} 
+#modal_tmw .close { 
+	color: #fbff00; 
+	font-size: 40px; 
+	position: absolute; 
+	right: 30px; 
+	top: 10px; 
+	font-weight: bold;
+}
+
+#modal_tmw label {
+    display: inline-block;
+    width: 169px;
+}
+table, th, td {
+    border: -11px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+/* Settings ba?ly?y */
+#titleSetings {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffd700; /* altyn sarysy */
+}
+
+/* Containerlar arasyndaki bo?luk */
+#settins-container .container {
+    margin-bottom: 10px;
+}
+
+/* Ayar isimleri */
+.settings_span {
+    display: block;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+/* Inputlar ve sliderlar */
+#settins-container input[type="text"],
+#settins-container input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Range outputlary */
+#settins-container output {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Toggle switch'ler */
+.settings-lineZoom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.settings-switchZoom {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.settings-switchZoom:checked {
+    background: #4caf50;
+}
+
+.settings-switchZoom:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    background: #ffffff;
+    transition: transform 0.3s;
+}
+
+.settings-switchZoom:checked:before {
+    transform: translateX(20px);
+}
+
+/* Scrollbar */
+#settins-container::-webkit-scrollbar {
+    width: 6px;
+}
+#settins-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+}
+#settins-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+
+
+  /* Contenedor principal de los servidores */
+.servers-container {
+    margin-top: 10px;
+    background: #ffffff;
+    border-radius: 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#user_config {
+  display: none !important;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 55%;
+  background-color: gray; /* Estado por defecto */
+  margin: 0px 0px;
+}
+
+/* Estilos de la tabla */
+.server-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Estilos del encabezado de la tabla */
+.server-table thead {
+    background: #3b3b50;
+    color: #ffffff;
+}
+
+.server-table th {
+    padding: 1px;
+    font-size: 14px;
+    border-bottom: 2px solid #ffffff;
+    text-transform: uppercase;
+}
+
+/* Estilos de las filas de la tabla */
+.server-table tbody tr {
+    background: #393e43;
+    transition: all 0.3s ease-in-out;
+}
+
+.server-table tbody tr:hover {
+    background: #383850;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Estilos para las celdas de la tabla */
+.server-table td {
+    padding: 1px;
+    border-bottom: 1px solid #f7941d;
+}
+
+/* Estilos de las imÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â¡genes en la tabla */
+.server-image,
+.streamer-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.server-image:hover,
+.streamer-image:hover {
+    transform: scale(1.2);
+}
+.ui-tabs-tab {
+  padding: 0px 8px;
+  background: transparent; /* Arka planý þeffaf yaptýk */
+  border: 1px solid white; /* Beyaz kenarlýk */
+  border-radius: 0px; /* Kenarlarý kare yapmak için köþe yuvarlamayý sýfýrladýk */
+  margin: 0px px; /* Yazým hatasý vardý, düzeltildi */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.ui-tabs-tab:hover {
+  background: #50506d;
+}
+
+#game-wrap #game-cont #stretch-box #main-menu-view #mm-line-bottom #mm-bottom-buttons #mm-settings {
+    background-color: #26c6da;
+    color: #fff;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    min-width: 120px;
+    display: inline-block;
+    margin: 90px 20px 0 -30px; /*  st sa  alt sol */
+}
+
+#game-wrap #game-cont #stretch-box #main-menu-view #mm-line-bottom #mm-bottom-buttons #mm-store {
+    background-color: #8bc34a;
+    color: #fff;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    min-width: 120px;
+    display: inline-block;
+    float: right;
+    margin: 80px 40px 0 10px; /*  st sa  alt sol */
+}
+
+#skin-description-text:hover {
+  background-color: #ff7f00; /* Hover durumunda daha koyu turuncu */
+}
+
+#background-canvas {
+    background-image: url(https://wormturkio.com/ops_2025/old22.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+     /* Mueve la imagen mÃƒÆ’Ã†â€  z Ãƒâ€ Ã¢â‚¬â z¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€zÂ¢ÃƒÆ’Ã†â€  z ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡s a la izquierda */
+     /* Mueve la imagen mÃƒÆ’Ã†â€  z Ãƒâ€ Ã¢â‚¬â z¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€zÂ¢ÃƒÆ’Ã†â€  z ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡s a la derecha */
+     /* Mueve la imagen 50px hacia la derecha */
+     /* Mueve la imagen 20px hacia arriba */
+  background-position: 5% center;
+  }
+
+  /* Definimos la animaciÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â³n de zoom */
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Estado inicial */
+    }
+    50% {
+      transform: scale(1.5); /* Escala mÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â¡xima en la mitad de la animaciÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â³n */
+    }
+    100% {
+      transform: scale(1); /* Regreso gradual al estado original */
+    }
+  }
+
+
+
+  #game-wrap #game-cont #stretch-box #main-menu-view #mm-line-center .column-left .description-text * {
+    font-size: 10px !important;
+  }
+  .conteiner {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    /* padding: 10px; */
+    /* background-color: #333; */
+    border-radius: 2px;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.selectSala {
+    flex-grow: 1;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    /*transition: color 0.3s ease-in-out;*/
+}
+
+.conteiner:hover {
+    background-color: red;
+}
+
+.conteiner img {
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.conteiner:hover img {
+    transform: scale(1.05);
+}
+
+
+#mm-skin-prev {
+  background-image: url(https://i.imgur.com/y1xLzGm.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(0deg) !important;
+  transition: transform 0.3s ease; /* Hover geÃƒÂ§iÃ…Å¸ animasyonu */
+}
+
+#mm-skin-next {
+  background-image: url(https://i.imgur.com/OyU0y8x.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: transform 0.3s ease; /* Hover geÃƒÂ§iÃ…Å¸ animasyonu */
+}
+
+/* Mouse ÃƒÂ¼zerine gelindiÃ zÅ¸inde deÃ zÅ¸iÃ…Å¸iklik */
+#mm-skin-prev:hover,
+#mm-skin-next:hover {
+  transform: scale(1.1) !important; /* Ãƒâ€“Ã zÅ¸eyi biraz bÃƒÂ¼yÃƒÂ¼t */
+  cursor: pointer; /* Mouse iÃ…Å¸aretÃƒÂ§isini belirgin yap */
+}
+
+  #mm-coins-buy{
+    width: 70px !important;
+    background-color: transparent !important;
+    background-image: url(https://i.imgur.com/fv1MAb1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #mm-coins-box {
+    width: 250px !important;
+  }
+
+  
+  #mm-coins-box {
+    display: flex;
+    align-items: center;
+  }
+  #mm-player-info{
+    display: block !important;
+  }
+  #mm-coins-buy {
+    margin-left: 50px !important; /* Ajustar segÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¿Ãƒâ€šÃ‚Â½n sea necesario */
+    width: 50px; /* Ajustar segÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¿Ãƒâ€šÃ‚Â½n sea necesario */
+    height: 50px; /* Ajustar segÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¿Ãƒâ€šÃ‚Â½n sea necesario */
+    background-color: #ccc; /* Ajustar segÃƒÆ’Ã‚Â¯Ãƒâ€šÃ‚Â¿Ãƒâ€šÃ‚Â½n sea necesario */
+    cursor: pointer;
+  }
+
+#game-wrap #game-cont #stretch-box #main-menu-view #mm-line-top #mm-player-info {
+    display: inline-block;
+    width: 320px;
+    height: 50px;
+    position: absolute;
+    left: -40px;
+    top: 0px;
+    cursor: pointer
+}
+
+
+  #mm-coins-val {
+    opacity: 0;
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  #mm-coins-box:hover #mm-coins-val {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #mm-player-info:hover #mm-player-username,
+  #mm-player-info:hover .mm-player-exp,
+  #mm-player-info:hover #mm-player-level {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #mm-player-exp-bar {
+    background-color: #ffffff !important;
+  }
+  #mm-player-exp-val {
+    color: #6f6b64 !important;
+  }
+  .overlay-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      270deg,
+      rgba(226, 224, 211, 0) 0%,
+      rgba(0, 0, 0, 0.8687850140056023) 100%
+    );
+  }
+  .overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250.625em;
+    height: 23.8em;
+    background: url(https://i.imgur.com/eEHJ2C9.png) 0 100%
+      repeat-x;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+    height: 43.75em;
+  }
+  @-webkit-keyframes cloudLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  @keyframes cloudLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  @keyframes fall {
+    0% {
+        transform: translate3d(10px, -200px, 10px);
+        opacity: 1;
+    }
+    20% {
+        transform: translate3d(8px, -170px, 10px) rotate(10deg);
+    }
+    40% {
+        transform: translate3d(8px, -90px, 10px) rotate(-10deg);
+    }
+    60% {
+        transform: translate3d(6px, -45px, 10px) rotate(10deg);
+    }
+    80% {
+        transform: translate3d(4px, 10px, 10px) rotate(-10deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 10px) rotate(0deg);
+        opacity: 1;
+    }
+  }
+  .mm-logo,
+  .mm-event-cont{
+    animation: fall 5s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }
+  .mm-logo,
+  .loading-logo {
+    animation: pulse 4s infinite;
+  }
+  .mm-logo {
+    margin-left: 100px !important;
+    width: 100px !important;
+  }
+   /* AnimaciÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â³n de pulso */
+   @keyframes pulse {
+    0% { transform: scale(2); opacity: 1; }
+    50% { transform: scale(2.1); opacity: 0.8; }
+    100% { transform: scale(2); opacity: 1; }
+}
+  /*@keyframes derechaizworm {
+    0% {
+        transform: translateX(-400%);
+        opacity: 0;
+    }
+  
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+  }
+  #mm-skin-canv{
+    animation: derechaizworm 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }*/
+  
+  @keyframes cambioSkinWorm {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(0.3);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes cambioSkinWorm2 {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    30% {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+    60% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cambio-skin {
+    animation: cambioSkinWorm 1.5s ease-in-out forwards !important;
+}
+
+.cambio-skin2 {
+    animation: cambioSkinWorm2 1.5s ease-in-out forwards !important;
+}
+
+  
+  
+  
+  @keyframes derechaiz {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+  
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+  }
+  .column-right,
+  #mm-coins-box,
+  #mm-skin-next {
+    animation: derechaiz 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes izquierdade {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+  
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+  }
+  .column-left,
+  #mm-player-info,
+  #mm-skin-prev {
+    animation: izquierdade 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  
+  
+  
+  
+  .single-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #010615;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+  }
+  
+  .single-card:hover {
+    height: 400px;
+  }
+  
+  .single-card::before,
+  .single-card::after {
+    content: "";
+    background: linear-gradient(45deg, #ff05ac 0%, #ff05ac 18%, aqua 100%);
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+  }
+  
+  .single-card::after {
+    filter: blur(40px);
+    z-index: -2;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .flag {
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated; /* Prueba esta opciÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â³n si la imagen es pixel art */
+}
+
+  
+  .flag {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    border-radius: 10px;
+    margin: 2.5px;
+    vertical-align: text-top;
+    line-height: 32px;
+    background: url(https://i.imgur.com/DiWX62Y.png) no-repeat;
+    transition: transform 0.3s ease; /* Agrega una transiciÃƒÆ’Ã†â€  z Ãƒâ€šÃ‚Â³n suave */
+
+  }
+
+  .ui-tab-active .flag{
+    opacity: 1;
+  }
+  .ui-tabs-tab .flag:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      will-change: transform;
+  }
+ 
+  .ui-tab-active {
+    box-shadow: inset 0 0 20px rgb(37 37 53), 0 0 20px rgba(255, 255, 255, 0.2) !important;
+    outline-color: rgba(255, 255, 255, 0) !important;
+    outline-offset: 15px !important;
+    border-radius: 1px;
+  }
+
+  .mx {
+  background-position: 0px -106px;
+  
+  }
+  .us {
+  background-position: 0px -35px;
+  }
+  .ca {
+  
+  background-position: 0px -71px;
+  }
+  .de {
+  background-position: 0px -141px;
+  }
+  .fr {
+  background-position: 0px -177px;
+  }
+  .sg {
+  background-position: 0px -212px;
+  }
+  .jp {
+  background-position: 0px -247px;
+  }
+  .au {
+  background-position: 0px -283px;
+  }
+  .gb {
+  background-position: 0px -318px;
+  }
+
+
+ 
+#game-wrap #game-cont #stretch-box #toaster-view #toaster-stack .toaster-levelup .toaster-levelup-close:hover {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
+    background-color: #f9ab4e
+}
+
+#game-wrap #game-cont #stretch-box #toaster-view #toaster-stack .toaster-levelup .toaster-levelup-close:focus {
+    outline: 0
+}
+
+.input-container2 {
+  display: flex;
+  flex-direction: column; /* Dikey hizalama iÃƒÂ§in column kullanÃ zÂ±yoruz */
+  justify-content: center; /* Dikeyde ortalama (ÃƒÂ¼stten aÃ…Å¸aÃ zÅ¸Ã zÂ±ya) */
+  align-items: center; /* Yatayda ortalama (soldan saÃ zÅ¸a) */
+  background-color: #393e43;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 2px;
+  margin: 5px 0;
+  width: 300px; /* Bu geniÃ…Å¸liÃ zÅ¸i deÃ zÅ¸iÃ…Å¸tirebilirsiniz */
+  box-sizing: border-box;
+  height: auto; /* Ã zÂ°ÃƒÂ§erik yÃƒÂ¼ksekliÃ zÅ¸ine gÃƒÂ¶re ayarlandÃ zÂ± */
+  
+  /* Pozisyon iÃƒÂ§in dÃƒÂ¼zenleme */
+  position: absolute; /* Sabit pozisyonlama */
+  left: px; /* Sol mesafe */
+  top: -1820px; /* ÃƒÅ“stten mesafe */
+}
+
+
+
+.premium-badge, #premium-expiration {
+  display: none;
+}
+
+.column-middle {
+  left: 371px !important;
+  top: 60px !important;
+}
+.column-left {
+  right: 300px !important;
+  top: 15px !important;
+  left: -60px !important;
+}
+.column-right {
+    opacity: 1 !important;
+    top: 30px !important;
+    animation: slideInFromLeft 0.7s ease-out;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+	left: 760px !important;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* taþmayý engeller */
+  border-radius: 12px; /* ayný radius’u verelim */
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+
+.servers-container {
+  position: fixed;
+  height: 285px !important;
+  width: 530px;
+  width: 342px;
+  border: 1px solid #ffffff;
+  overflow: auto;
+  margin: 90px -3px !important;
+}
+.ui-tabs-nav{
+  display: flex;
+  position: relative;
+  margin-right: -9px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  top: 0px;
+  border-bottom-width: 0px;
+  white-space: nowrap;
+  list-style: none;
+  padding: 0px;
+  border: 1px solid #fff;
+  width: 333px !important;
+  margin: 25px -3px !important;
+  position: fixed;
+  overflow: hidden;
+}
+#mm-advice-cont{
+  display: flex !important;
+  padding: 0px;
+  width: 100%;
+  margin-top: 20px;
+  height: 0px !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  padding: 0px;
+  margin-top: -3px;
+  height: 65px !important;
+  position: fixed;
+  width: 320px;
+}
+
+
+
+
+
+#settings-menu .options-list .hotkey:hover {
+  background-color: rgba(255, 112, 67, 0.2);
+  transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+#settings-menu .options-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#settings-menu .options-list::-webkit-scrollbar-track {
+  background: rgba(41, 41, 41, 0.5);
+}
+
+
+#settings-menu #close-settings-menu {
+  color: #909090;
+  position: absolute;
+  z-index: 500;
+  right: 0px;
+  top: -24px;
+  background: #090909;
+  padding: 2px 24px;
+  display: flex;
+  cursor: pointer;
+}
+
+#settings-menu #close-settings-menu i {
+  pointer-events: none;
+  font-size: 20px
+}
+
+#settings-menu .navigation {
+display: flex;
+flex-grow: 0;
+flex-basis: 140px;
+flex-direction: column
+}
+.control-bar .buttons .button.dummy {
+width: 120px;
+z-index: 4
+}
+#settings-menu .navigation .tab {display: flex;padding: 9px 18px;font-size: 15px;font-family: 'Noto Sans', sans-serif;text-transform: uppercase;color: #ffffff;background-color: #393e43;cursor: pointer;transition: all 0.5s}
+
+#settings-menu .navigation .tab i {
+font-size: 18px;
+margin-right: 5px;
+pointer-events: none;
+line-height: 22px
+}
+
+
+ .flag {
+    display: block;
+    margin: 6px 0;
+    background-image: url(https://i.imgur.com/oEICJp7.png);
+    background-repeat: no-repeat;
+    background-size: 135px 120px;
+}
+
+.ui-tab:hover {
+    background: #fff;
+    color: #1e05459c;
+    box-shadow: 0 0 3px #1e05459c, 0 0 5px #1e05459c, 0 0 10px #1e05459c, 0 0 15px #1e05459c, 0 0 20px #1e05459c, 0 0 35px #1e05459c, 0 0 30px #1e05459c;
+    border-radius: 10px;
+}
+
+.ui-tab-active {
+    background-color: #00ff21 !important;
+    border-radius: 10px;
+}
+
+
+.ui-tabs-nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 bayrak yatayda sÃ zÂ±ralanacak */
+    gap: 8px; /* Bayraklar arasÃ zÂ±ndaki boÃ…Å¸luk */
+    justify-content: start; /* BaÃ…Å¸langÃ zÂ±ÃƒÂ§ta hizala */
+    align-items: center;
+    justify-items: start; /* Yatayda solda hizala */
+    align-content: start; /* Dikeyde ÃƒÂ¼stte hizala */
+    padding: 4px; /* Konteynerin iÃƒÂ§ paddingi */
+}
+
+
+
+.mx {
+    width: 40px;
+    height: 25px;
+    background-position: -92px -92px;
+}
+
+.us {
+    width: 40px;
+    height: 25px;
+    background-position: -48px -33px;
+}
+
+.ca {
+    width: 40px;
+    height: 25px;
+    background-position: -92px -3px;
+}
+
+.de {
+    width: 40px;
+    height: 25px;
+    background-position: -48px -62px;
+}
+
+.fr {
+    width: 40px;
+    height: 25px;
+    background-position: -2px -62px;
+}
+
+.sg {
+    width: 40px;
+    height: 25px;
+    background-position: -92px -33px;
+}
+
+.jp {
+    width: 40px;
+    height: 25px;
+    background-position: -48px -92px;
+}
+
+.au {
+    width: 40px;
+    height: 25px;
+    background-position: -48px -3px;
+}
+
+.gb {
+    width: 40px;
+    height: 25px;
+    background-position: -3px -4px;
+}
+
+.br {
+    width: 40px;
+    height: 25px;
+    background-position: -2px -33px;
+}
+
+.background-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* kutular aras nda bo luk */
+    padding: 5px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-top: 10px;
+    max-height: 120px; /*  ok uzun olmas n */
+    overflow-y: auto; /* i eri i kayd r labilir yapar */
+    justify-content: center; /* ortala */
+}
+
+.background-container img {
+    width: 40px; /* k   k boyutlu resimler */
+    height: 40px;
+    object-fit: cover; /* resimler ta madan s  s n */
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.background-container img:hover {
+    transform: scale(1.1); /*  st ne gelince hafif b y s n */
+}
