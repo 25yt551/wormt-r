@@ -10,15 +10,44 @@ var antiAFKStarted = false;
 var lastSk = 0;
 var directionToggle = 1;
 
+// Test function to manually start the movement loop
+function testMovement() {
+    console.log("🧪 Testing movement loop...");
+    if (antiAFKStarted) {
+        console.log("⚠️ Anti-AFK already running, stopping first...");
+        antiAFKStarted = false;
+        setTimeout(() => {
+            startMicroAFK();
+        }, 100);
+    } else {
+        startMicroAFK();
+    }
+}
+
 function startMicroAFK() {
-    clearInterval(intervalID);
     console.log("🔄 Anti-AFK started - movement every 100ms (0.1 seconds)");
     
-    // Use a more precise timing method
+    // Ensure we start from the current rotation position
+    try {
+        if (anApp?.s?.H?.sk !== undefined) {
+            lastSk = anApp.s.H.sk;
+            console.log("📍 Starting from current rotation:", lastSk);
+        }
+    } catch (err) {
+        console.log("⚠️ Could not get current rotation:", err);
+    }
+    
+    // Use a more precise timing method with better error handling
     let lastTime = Date.now();
     const targetInterval = 100; // 0.1 seconds = 100ms
+    let movementCount = 0;
     
     function movementLoop() {
+        if (!antiAFKStarted) {
+            console.log("🛑 Anti-AFK stopped, ending movement loop");
+            return;
+        }
+        
         const currentTime = Date.now();
         const elapsed = currentTime - lastTime;
         
@@ -30,42 +59,50 @@ function startMicroAFK() {
                     lastSk += offset * directionToggle;
                     directionToggle *= -1; // bir sağ, bir sol
                     anApp.s.H.sk = lastSk;
-                    console.log("📍 Movement applied - sk:", lastSk, "toggle:", directionToggle, "elapsed:", elapsed + "ms");
+                    movementCount++;
+                    console.log(`📍 Movement #${movementCount} applied - sk: ${lastSk.toFixed(4)}, toggle: ${directionToggle}, elapsed: ${elapsed}ms, total movements: ${movementCount}`);
                     lastTime = currentTime;
                 } else {
-                    console.log("⚠️ anApp.s.H.sk is undefined");
+                    console.log("⚠️ anApp.s.H.sk is undefined, retrying...");
                 }
             } catch (err) {
                 console.error("❌ Error in movement loop:", err);
+                // Continue trying even if there's an error
             }
         }
         
-        // Continue the loop
-        if (antiAFKStarted) {
-            requestAnimationFrame(movementLoop);
-        }
+        // Continue the loop with requestAnimationFrame for smooth execution
+        requestAnimationFrame(movementLoop);
     }
     
     // Start the loop
     requestAnimationFrame(movementLoop);
     antiAFKStarted = true;
+    console.log("✅ Movement loop started successfully");
 }
 
 document.addEventListener("mousemove", () => {
     clearTimeout(afkTimer);
+    
+    // Store the current rotation value when mouse moves
     try {
         if (anApp?.s?.H?.sk !== undefined) {
             lastSk = anApp.s.H.sk;
+            console.log("🖱️ Mouse moved - current rotation saved:", lastSk);
         }
-    } catch {}
-
-    if (antiAFKStarted) {
-        console.log("🖱️ Mouse moved - stopping anti-AFK");
-        clearInterval(intervalID);
-        intervalID = null;
-        antiAFKStarted = false;
+    } catch (err) {
+        console.log("⚠️ Could not save current rotation:", err);
     }
 
+    // Stop anti-AFK if it's running
+    if (antiAFKStarted) {
+        console.log("🖱️ Mouse moved - stopping anti-AFK");
+        antiAFKStarted = false;
+        // Reset direction toggle to ensure clean start next time
+        directionToggle = 1;
+    }
+
+    // Start the AFK timer
     afkTimer = setTimeout(() => {
         if (!antiAFKStarted) {
             console.log("⏰ AFK timeout reached - starting anti-AFK in 2 seconds");
